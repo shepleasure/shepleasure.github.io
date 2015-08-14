@@ -37,7 +37,14 @@ var model = {
 			}
 
 			$scope.addNewItem = function (actionText) {
+				if (!actionText) {
+					return;
+				}
+
+				else {
 				$scope.todo.items.push({ action: actionText, done: false });
+				
+				}
 			}
 
 		});
